@@ -1,13 +1,13 @@
 const database = require('./database.service');
 
-async function getFamilies() {
+async function getAllFamilies() {
     const families = await database.query(
         `SELECT * FROM families`,
     );
     return families;
 }
 
-async function getFamily(family_id) {
+async function getFamilyByID(family_id) {
     const family = await database.query(
         `SELECT * FROM families WHERE family_id = ? LIMIT 1`,
         [family_id]
@@ -15,7 +15,38 @@ async function getFamily(family_id) {
     return family;
 }
 
+async function searchFamilies(query) {
+    const families = await database.query(
+        `
+        SELECT
+            *
+        FROM
+            families
+        WHERE
+            family_name LIKE ? ;
+        `,
+        [`%${query}%`]
+    );
+    return families;
+}
+
+async function createFamily(familyName) {
+    const result = await database.query(
+        `
+        INSERT INTO families
+            (family_name)
+        VALUES
+            (?) ;
+        `,
+        [familyName]
+    );
+    const created = await getFamilyByID(result.insertId);
+    return created;
+}
+
 module.exports = {
-    getFamilies,
-    getFamily,
+    getAllFamilies,
+    getFamilyByID,
+    searchFamilies,
+    createFamily,
 }
