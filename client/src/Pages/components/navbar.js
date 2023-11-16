@@ -2,6 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import '../css/navbar.css';
+
 
 function Navegationbar() {
   return (
@@ -11,8 +13,6 @@ function Navegationbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/form">Requisição</Nav.Link>
-
             <NavDropdown title="Back-Office" id="basic-nav-dropdown">
               <NavDropdown.Item href="/create">Criar Componente</NavDropdown.Item>
               <NavDropdown.Item href="/reqlist">

@@ -1,0 +1,49 @@
+
+.navbar{
+background-color: #355d80 !important;
+margin-bottom: 5vh;
+color:white !important;
+}
+.navbar-brand{
+    color:white ;
+}
+
+.table{
+    width: 90% !important;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+input#searchval{
+    margin-left: 5%;
+    margin-right: 1%;
+}
+
+form#formcreate
+{
+    width: 90% !important;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+h3#title{
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+label.form-label{
+    margin-top: 1%;
+}
+
+button.btn.btn-primary{
+    margin-top:5%;
+}
+
+select#filterSelect.form-select{
+    width: 20vw;
+    margin-right: 5%;
+    margin-left: 5%;
+
+}

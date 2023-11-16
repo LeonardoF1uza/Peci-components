@@ -43,15 +43,18 @@ function CompTable() {
 
   return (
     <>
-      <input id='searchval' placeholder='Search value here'></input>
+      <input id='searchval' placeholder='Procurar Componente'></input>
       <button onClick={() => getData(document.getElementById('searchval').value)}>Search</button>
       <Table striped bordered hover>
         <thead>
           <tr>
             <th>#</th>
-            <th>Component Name</th>
+            <th>Componente</th>
             {/* Add more table headers based on your API response */}
-            <th>Other Column</th>
+            <th>Posição</th>
+            <th>Referência</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
             {/* Add more headers as needed */}
           </tr>
         </thead>
@@ -62,6 +65,9 @@ function CompTable() {
               <td>{item.name}</td>
               {/* Render other columns based on your API response */}
               <td>{item.position}</td>
+              <td>{item.reference}</td>
+              <td>{item.quantity}</td>
+              <td>{item.price}€</td>
               {/* Add more columns as needed */}
             </tr>
           ))}

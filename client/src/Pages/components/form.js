@@ -38,6 +38,7 @@ function CreateForm() {
 
             if (response.ok) {
               console.log('Data sent successfully!');
+              window.location.href = '/';
               // Reset the form or handle success as needed
             } else {
               console.error('Failed to send data.');
@@ -48,7 +49,9 @@ function CreateForm() {
         };
 
         return (
-          <Form onSubmit={handleSubmit}>
+          <>
+          <h3 id="title">Adicionar Componente</h3>
+          <Form id="formcreate" onSubmit={handleSubmit}>
              <Form.Group controlId="formSelect">
                 <Form.Label>Família</Form.Label>
                 <Form.Select
@@ -134,6 +137,7 @@ function CreateForm() {
               Submit
             </Button>
           </Form>
+          </>
         );
       };
 

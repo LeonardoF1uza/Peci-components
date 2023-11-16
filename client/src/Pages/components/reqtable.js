@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
+import '../css/reqtable.css';
 
 function ReqTable() {
   const [data, setData] = useState([]);
@@ -72,20 +73,11 @@ function ReqTable() {
 
   return (
     <>
-      <input id='searchval' placeholder='Search value here'></input>
+      <input id='searchval' placeholder='Procurar Pessoa'></input>
       <button onClick={() => getData(document.getElementById('searchval').value)}>Search</button>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>email</th>
-            <th>Component Name</th>
-            {/* Add more table headers based on your API response */}
-            <th>Quantidade</th>
-            <th>
-            <div className="mb-3">
+      <div className="mb-3">
                 <label htmlFor="filterSelect" className="form-label">
-                    STATUS
+
                 </label>
                 <select
                 className="form-select"
@@ -100,6 +92,16 @@ function ReqTable() {
                 {/* Add more filter options as needed */}
                 </select>
             </div>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>email</th>
+            <th>Componente</th>
+            {/* Add more table headers based on your API response */}
+            <th>Quantidade</th>
+            <th>
+            Status
             </th>
             {/* Add more headers as needed */}
           </tr>
