@@ -7,10 +7,10 @@ async function getAllFamilies() {
     return families;
 }
 
-async function getFamilyByID(family_id) {
+async function getFamilyByID(id) {
     const family = await database.query(
         `SELECT * FROM families WHERE family_id = ? LIMIT 1`,
-        [family_id]
+        [id]
     );
     return family;
 }

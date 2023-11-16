@@ -7,10 +7,10 @@ async function getAllComponents() {
     return components;
 }
 
-async function getComponentByID(componentId) {
+async function getComponentByID(id) {
     const component = await database.query(
         `SELECT * FROM components WHERE component_id = ? LIMIT 1`,
-        [componentId]
+        [id]
     );
     return component;
 }
