@@ -12,11 +12,12 @@ function CompTable() {
   }, []);
 
   const getData = async (value) => {
-    const apiUrl = 'http://localhost:5001/api/components/';
 
-    // Construct the URL with parameters
-    const urlWithParameters = `${apiUrl}${encodeURIComponent(value)}`;
-
+    let urlWithParameters = 'http://localhost:5001/api/components';
+    if(value!==''){
+        // Construct the URL with parameters
+        urlWithParameters += `/search?q=${encodeURIComponent(value)}`;
+    }
     // Make the fetch call
     fetch(urlWithParameters, {
       method: 'GET',
