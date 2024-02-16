@@ -3,6 +3,9 @@ import { Button } from 'react-bootstrap';
 import mainLogo from '../assets/ua.png';
 import menuButton from '../assets/menubut.png';
 import Cart from '../assets/cart.png';
+import { Link } from 'react-router-dom';
+
+
 const Navs= () => {
   const [isVisible, setIsVisible] = useState(true);
 
@@ -13,15 +16,15 @@ const Navs= () => {
   return (
     <div>
       <div>
-        <nav class="navbar  navbar-light bg-light"  id="hornav">
+        <nav className="navbar  navbar-light bg-light"  id="hornav">
             <Button variant="primary" id="navbutton" onClick={toggleNavbar}>
             <img  src={menuButton} id="menbutton"/>
             </Button>
             <img  src={mainLogo} id="uaimage"/>
-            <form class="form-inline my-2 my-lg-0" id="navsearch">
-              <a href='/Cart'><img  src={Cart} id="cart"/></a>
+            <form className="form-inline my-2 my-lg-0" id="navsearch">
+              <Link to="/Cart"><img  src={Cart} id="cart"/></Link>
 
-              <button class="butt btn my-2 my-sm-0" id="navsearchbutton" type="submit">$USER_NAME</button>
+              <button className="butt btn my-2 my-sm-0" id="navsearchbutton" type="submit">$USER_NAME</button>
             </form>
         </nav>
       </div>
@@ -31,24 +34,16 @@ const Navs= () => {
             <div className="sidebar-sticky">
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <a className="nav-link active" href="/Dashboard">
-                    Components
-                  </a>
+                  <Link to="/Dashboard" className="nav-link active">Components</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    My Orders
-                  </a>
+                  <Link to="/Dashboard" className="nav-link">My orders</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Products
-                  </a>
+                  <Link to="/Dashboard" className="nav-link">Products</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/Admin">
-                    Admin
-                  </a>
+                  <Link to="/Admin" className="nav-link">Admin</Link>
                 </li>
                 {/* Add more items as needed */}
               </ul>

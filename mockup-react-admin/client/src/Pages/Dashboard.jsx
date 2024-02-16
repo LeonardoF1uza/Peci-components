@@ -3,11 +3,11 @@ import CompTable from '../Components/table';
 
 const Dashboard = () => {
   return (
-    
+
     <div id="dashboard">
-      
-      <h1>Welcome USER,</h1>
-      <p>Welcome to the Home Page!</p>
+
+      <h1>Componentes</h1>
+
       <CompTable></CompTable>
     </div>
   );
