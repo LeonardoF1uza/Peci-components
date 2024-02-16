@@ -1,0 +1,67 @@
+@import "../variables.scss";
+
+.tabWrapper {
+  overflow-x: auto;
+}
+
+.tab {
+  width: 90%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tab tbody tr:hover {
+  background-color: $tertiary-gray;
+}
+
+.tab th,
+.tab td { 
+  padding: $space-l;
+  text-align: center;
+}
+
+.tab td {
+  color: $text-gray;
+}
+
+.tab th {
+  background-color: $secundary-gray;
+  border-top: 4px solid $primary-blue;
+}
+
+.tab tr {
+  border-right: 1px solid $tertiary-gray;
+  border-left: 1px solid $tertiary-gray;
+  border-bottom: 1px solid $tertiary-gray;
+}
+
+.id {
+  width: 5%;
+}
+
+.Component {
+  width: 45%;
+}
+.ComponentColumn{
+  color:$primary-blue !important;
+}
+
+.pos {
+  width: 10%;
+}
+
+.Ref {
+  width: 15%;
+}
+
+.amount {
+  width: 10%;
+}
+
+.price {
+  width: 5%;
+}
+
+.add {
+  width: 10%;
+}

@@ -1,0 +1,85 @@
+@import "../variables.scss";
+
+.header {
+    height: 80px;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0 $space-xxl;
+    background-color: $primary-blue;
+    color: $accessible-white;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .leftSide {
+        gap: $space-m;
+        align-items: center;
+        display: flex;
+
+        .hamburguerMenu {
+            cursor: pointer;
+
+            & svg path {
+                fill: $accessible-white;
+                transition: all 0.3s ease-in;
+            }
+
+            &:hover {
+                & svg path {
+                    fill: $accessible-black;
+                    transition: all 0.3s ease-in;
+                }
+            }
+        }
+
+        .logoUA {
+            height: 80px;
+            width: auto;
+        }
+
+        .peci {
+            font-size: $header-4;
+            font-weight: 200;
+            padding-left: $space-xl;
+        }
+    }
+
+    .rightSide {
+        gap: $space-m;
+        align-items: center;
+        display: flex;
+        overflow-y: auto;
+
+
+        .search {
+            cursor: pointer;
+            align-items: center;
+
+            & svg path {
+                fill: $accessible-white;
+                transition: all 0.3s ease-in;
+            }
+
+            &:hover {
+                & svg path {
+                    fill: $accessible-black;
+                    transition: all 0.3s ease-in;
+                }
+            }
+        }
+
+        .language {
+            font-size: $body-2;
+            padding: $space-xxs $space-m;
+            border-right: 1px solid $primary-white;
+            color: $accessible-white;
+            transition: all 0.3s ease-in;
+            cursor: pointer;
+
+            &:hover {
+                color: $accessible-black;
+                transition: all 0.3s ease-in;
+            }
+        }
+    }
+
+}

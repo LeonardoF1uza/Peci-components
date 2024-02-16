@@ -1,0 +1,151 @@
+@import "../variables.scss";
+
+
+.position{ 
+    font-Family: 'Arial, sans-serif';     
+    font-Size: $header-3;
+    padding-left: $space-xxxl;
+    font-Weight: 'wght@500';
+
+
+}
+.title{ 
+    font-Weight: 'bold';
+    margin-Bottom: 4px; 
+    font-family: 'Roboto, sans-serif';
+
+}
+
+.subTitle{ 
+    color: 'wght@300';
+    font-Size: $header-6;
+    font-family: 'Roboto, sans-serif';
+
+}
+.position{ 
+    font-Family: 'Arial, sans-serif';     
+    font-Size: $header-3;
+    font-Weight: 'wght@500';
+
+
+}
+.title2{ 
+    font-Weight: 'bold';
+    margin-Bottom: 4px; 
+    font-family: 'Roboto, sans-serif';
+    font-Size: $header-4;   
+
+}
+
+.subTitle2{ 
+    color: 'wght@300';
+    font-Size: $body-4;   
+    font-family: 'Roboto, sans-serif';
+
+}
+
+.drops{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: left;
+
+    padding-top: $space-s;
+    padding-bottom: $space-m;
+    padding-right: $space-s;
+    padding-left: $space-s;
+   
+}
+
+.SearchBox{
+    display: flex;
+    flex-direction: row;
+    width: 300px;   
+    text-align: left;
+    height: fit-content;    
+
+
+    
+    padding-top: $space-s;
+    padding-right: $space-s;
+    padding-bottom: $space-s;
+    
+}
+
+.dropsOptions{
+    display:flex;
+    flex-direction: row;
+    width: 250px;
+
+    text-align: left;
+    align-items: center;
+
+    margin-right: $space-l;
+
+
+}
+
+.inputs{
+    width: 250px;
+    padding-top: $space-s;
+    padding-bottom: $space-s;
+    padding-right: $space-s;
+    padding-left: $space-s;
+
+}
+
+.submitBotton{
+    width: 111px;
+    height: $space-xl+3;
+
+}
+.BottonRight{
+    width: 111px;
+    height: $space-xxl;
+    margin-right: o;
+    margin-left: auto;
+    }
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
+  }
+  
+  .modal.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .alignBotoms{
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .centerDrops{
+    width: 90%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap : $space-l;
+    padding-left: $space-xxxl;
+    }
+
+    .redText{
+        color: red
+    }

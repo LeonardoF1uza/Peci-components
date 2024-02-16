@@ -1,0 +1,43 @@
+@use "sass:math";
+
+$nav-menu-width-expanded: 230px;
+$nav-menu-width-collapsed: 80px;
+
+
+/* Colors */
+$primary-blue: #0eb4bd;
+$primary-white: #ffffff;
+$primary-black: #000000;
+$primary-gray: #292929;
+$secundary-gray: #f0f0f0;
+$tertiary-gray: #DEDEDF;
+
+$text-gray: #777;
+
+
+$accessible-white: #F8F8F8;
+$accessible-black: #222222;
+
+
+
+/* Font size */
+$header-1: 64px;
+$header-2: 52px;
+$header-3: 40px;
+$header-4: 32px;
+$header-5: 24px;
+$header-6: 20px;
+$body-1: 16px;
+$body-2: 14px;
+$body-3: 12px;
+$body-4: 10px;
+
+/* Spacing */
+$space-xxs: 2px;
+$space-xs: 4px;
+$space-s: 8px;
+$space-m: 16px;
+$space-l: 24px;
+$space-xl: 32px;
+$space-xxl: 40px;
+$space-xxxl: 52px;

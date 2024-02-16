@@ -1,0 +1,81 @@
+@import "../variables.scss";
+
+.navbar {
+    background-color: $primary-gray;
+    height: calc(100vh - 80px);
+    transition: all 0.3s ease-in;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: $space-s;
+
+    .element {
+        padding: $space-m 0;
+        cursor: pointer;
+        width: inherit;
+        justify-content: center;
+        align-items: center; 
+        display: flex;
+        transition: all 0.2s ease-in;
+        
+       
+
+        .active {
+            & svg path {
+                fill: $primary-blue;
+            }
+        }
+
+        & svg path {
+            fill: $primary-white;
+        }
+
+        & svg {
+            width: $header-5;
+            height: $header-5;
+        }
+
+        &:hover {
+            background-color: $primary-black;
+        }
+
+    }
+
+    .textElement {
+        padding: $space-m 0;
+        cursor: pointer;
+        width: inherit;
+        justify-content: flex-start;
+        display: flex;
+        transition: all 0.2s ease-in;
+
+        span {
+            padding-left: $space-xl;
+            color: $accessible-white;
+            font-size: $body-2;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .active {
+            & svg path {
+                fill: $primary-blue;
+            }
+        }
+
+        &:hover {
+            background-color: $primary-black;
+        }
+
+    }
+
+}
+
+.collapsed {
+    width: $nav-menu-width-collapsed;
+}
+
+.expanded {
+    width: $nav-menu-width-expanded;
+}
