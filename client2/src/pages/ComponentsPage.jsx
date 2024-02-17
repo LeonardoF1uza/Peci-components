@@ -14,6 +14,14 @@ const ComponentsPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
+  const handleButtonClick = (item) => {
+    // abre modal de add com o item
+    handleOpenModal()
+    setChoice(item)
+
+    console.log("Item clicado:", item);
+  };
+
   const handleSearch = (query) => {
     setSearchTerm(query);
   };
@@ -30,16 +38,7 @@ const ComponentsPage = () => {
     console.log("Quantidade inserida:", quantity);
   };
 
-  const handleTableReturn = (tableData) => {
-    console.log(tableData);
-  };
-
-  const adicionarItem = (item) => {
-    setChoice(item);
-    handleOpenModal();
-  }
-
-  const dados = Array.from({ length: 20 }, (_, index) => ({
+  const data = Array.from({ length: 20 }, (_, index) => ({
     id: index + 1,
     Component: `Componente ${index + 1}`,
     pos: `Posição ${index + 1}`,
@@ -48,10 +47,20 @@ const ComponentsPage = () => {
     price: (Math.random() * 100).toFixed(2),
   }));
 
-  const filteredData = dados.filter(item => {
+  const columns = [
+    { id: 'id', title: '#' },
+    { id: 'Component', title: 'Component' },
+    { id: 'ref', title: 'referencia' },
+    { id: 'amount', title: 'Quantidade' },
+    { id: 'price', title: 'preço' },
+    { id: 'pos', title: 'posição' },
+
+
+  ];
+
+  const filteredData = data.filter(item => {
     return (
-      item.Component.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.ref.toLowerCase().includes(searchTerm.toLowerCase())
+      item.Component.toLowerCase().includes(searchTerm.toLowerCase()) ||  item.ref.toLowerCase().includes(searchTerm.toLowerCase())
     );
   });
 
@@ -65,14 +74,18 @@ const ComponentsPage = () => {
           <Dropdown description="Familia:" />
         </div>
         <div className={cn(mainCss.iconDiv)}>
-          <ICON_SHOPING className={cn(mainCss.icon)}/>             
+          <ICON_SHOPING className={cn(mainCss.icon)}/>   
+
+          {/*subestituir pelo tamanho de items do carrinho*/}
+
           <div className={cn(mainCss.badge)}>3</div>
         </div> 
       </div>
+
       <Modal isOpen={isModalOpen} component={choice} onClose={handleCloseModal} onSubmit={handleQuantitySubmit} />
+
       
-      <Table data={filteredData} onButtonClick={adicionarItem} /> {/* Passe a função adicionarItem como prop */}
-    
+      <Table data={filteredData} onButtonClick={handleButtonClick}  columns={columns} button={true} />;    
     </div>
   );
 }

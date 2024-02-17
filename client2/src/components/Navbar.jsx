@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import cn from 'classnames';
 
 // styling
 import { navbarCss } from "../styling/index.js";
-import { ICON_BOX, ICON_CABLE, ICON_COLLECTION } from "../assets/icons/index.js";
+import { ICON_BOX, ICON_CABLE } from "../assets/icons/index.js";
 
 const Navbar = ({ collapseNavbar, handleNavbar, ptLanguage }) => {
 

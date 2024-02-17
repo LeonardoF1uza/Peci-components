@@ -4,4 +4,4 @@ export {default as Navs} from './Navs';
 export {default as RequisitionForm} from './RequisitionForm';
 export {default as Comptable} from './table';
 export {default as Cart} from './Cart'
-export {default as Navbar} from './Navbar'
+export {default as Navbar} from './Navbar'z

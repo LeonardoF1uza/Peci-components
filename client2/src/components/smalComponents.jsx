@@ -33,7 +33,9 @@ const SearchBox = ({ onSearch }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     // Passa a consulta para a função de pesquisa externa
+    
     onSearch(query);
   };
 
